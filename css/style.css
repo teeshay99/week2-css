@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+    background-image: url(../images/pexels-anni-roenkae-3219899.jpg);
+    background-size: cover;
+    background-repeat: none;
+    
+
+}
+
+body p {
+    color: #FF847C;
+}
+
+h2 {
+    color: #E84A5F;
+    text-shadow: #FECEAB;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    background-color: #99B898;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+}
+
+nav a {
+    column-gap: auto;
+    color-scheme: #99b898;
+    justify-content: space-between;
+}
+
+main {
+    grid-column: 1 / 3;
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        'Home About-me About-me'
+        'My-Work My-Work Connect';
+    gap: 20px;
+}
+
+main section {
+    background: #2A363B;
+    padding: 15px;
+    border: 3px solid #99B898;
+}
+
+.Home {
+    grid-area: Home;
+}
+
+.About-me {
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-column: 2 / 4; */
+    grid-area: About-me;
+    display: grid;
+    grid-template-areas:
+        '1 2'
+        '3 4';
+}
+
+.pic1 {
+    max-width: 500px;
+    height: 100%
+}
+
+h2 {
+    background-color: #99b898;
+    text-align: center;
+}
+
+.About-me-1 {
+    grid-area: 1;
+}
+
+.About-me-2 {
+    grid-area: 2;
+}
+
+.About-me-3 {
+    grid-area: 3;
+}
+
+.About-me-4 {
+    grid-area: 4;
+}
+
+.My-Work {
+    /* grid-column: 1 / 3; */
+    grid-area: My-Work;
+}
+
+.Connect {
+    grid-area: Connect;
+}
+
+footer {
+    grid-column: 1 / 4;
+    background-color: #99B898;
+}
+
+@media all and (max-width: 500px) {
+    body {
+        color: #99b898;   
+}
+}
